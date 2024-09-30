@@ -10,6 +10,7 @@
 /node_modules
 /tests-examples
 /test-results
+/playwright-report
 npm-debug.log
 yarn-error.log
  

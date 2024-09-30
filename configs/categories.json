@@ -1,0 +1,11 @@
+{
+    "categories": {
+            "Category1": "Books, Magazines, Manga",
+            "Category2": "Book",
+            "Category3": "Computer It"
+},
+"level3categories": {
+    "Category3": "Computer It",
+    "Category4": "Humanities"
+}
+}

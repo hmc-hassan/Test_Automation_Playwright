@@ -1,0 +1,8 @@
+Hi,
+
+Due to some reasons the website is not loading in Pakistan so i had to install Vpn to access the website.
+I have automated the cases with respect to the website design where there is an option available to change the language and that
+is pre-req to my automation suite. I noticed that with different locations the website design/options adjust itself according 
+to the regions.
+
+By the time i wrote these scripts, my location through VPN is United States.

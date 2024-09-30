@@ -1,0 +1,16 @@
+{
+  "name": "playwright_test_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Hassan Murtaza",
+  "license": "ISC",
+  "description": "A playwright test automation project",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}

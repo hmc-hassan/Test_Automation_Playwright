@@ -1,8 +1,7 @@
 {
     "categories": {
             "Category1": "Books, Magazines, Manga",
-            "Category2": "Book",
-            "Category3": "Computer It"
+            "Category2": "Book"
 },
 "level3categories": {
     "Category3": "Computer It",

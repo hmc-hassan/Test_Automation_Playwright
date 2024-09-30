@@ -6,3 +6,6 @@ is pre-req to my automation suite. I noticed that with different locations the w
 to the regions.
 
 By the time i wrote these scripts, my location through VPN is United States.
+
+
+Command to execute tests: npx playwright test --project=chromium --headed

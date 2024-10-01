@@ -5,7 +5,7 @@ I have automated the cases with respect to the website design where there is an 
 is pre-req to my automation suite. I noticed that with different locations the website design/options adjust itself according 
 to the regions.
 
-By the time i wrote these scripts, my location through VPN is United States.
+By the time i wrote these scripts, my location through VPN is United States/Romania.
 
 
 Command to execute tests: npx playwright test --project=chromium --headed

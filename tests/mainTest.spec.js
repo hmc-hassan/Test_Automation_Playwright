@@ -10,7 +10,7 @@ const [categoryValue1,categoryValue2] = [categories.categories.Category1,categor
 const [categoryValue3,categoryValue4] = [categories.level3categories.Category3,categories.level3categories.Category4] //Sefregated tier 3 categories into 2 for verification of search history
 const categoryValues = [categoryValue4, categoryValue3];
 
-let sharedCategoryValue;
+let sharedCategoryValue; //global variable to share value of scenario 1 with scenario 2
 
 test.describe('Sample Test', () => {
   let page;
@@ -71,11 +71,11 @@ test.describe('Sample Test', () => {
       const navigateHome = new Home(page);
       await selectsCategory.click_Search(); //Click on search drop down
       await page.waitForTimeout(1500); //Static waits are added to view the execution of script
-      const myvalue1 = await validateHistory.getHistoryValues(); //get all history values available in History container
-      const firstValue = myvalue1.values[0] //Pick the top value and store it in variable
-      console.log('Very first value is',firstValue)
+      const get_value = await validateHistory.getHistoryValues(); //get all history values available in History container
+      const top_value = get_value.values[0] //Pick the top value and store it in variable
+      console.log('Very first value is',top_value)
       // Compare values
-      expect(firstValue).toBe(sharedCategoryValue); //Use the fisrst value for comparison. it should match with the value set from scenario 1
+      expect(top_value).toBe(sharedCategoryValue); //Use the fisrst value for comparison. it should match with the value set from scenario 1
       await validateHistory.click_LatestHistory(); //Click on latest history item
       await validateSelectedCategories(page,sharedCategoryValue,categoryValue1,categoryValue2); //Validate latest history item is equal to the one we executed in scenario 1
       await selectsCategory.input_Search(criteria); 
@@ -83,16 +83,16 @@ test.describe('Sample Test', () => {
       await navigateHome.click_Home();
       await selectsCategory.click_Search(); //Click on search drop down
       await page.waitForTimeout(1500);
-      const myvalue2 = await validateHistory.getHistoryValues(); //get all history values available in History container
-        if (myvalue2.totalvalue == 3){
-          console.log('The number of search histories are', myvalue2.totalvalue);
+      const total_value = await validateHistory.getHistoryValues(); //get all history values available in History container
+        if (total_value.totalvalue == 3){
+          console.log('The number of search histories are', total_value.totalvalue);
         }
         else{
-          console.error('Expected 3 search histories, but found', myvalue2.totalvalue);
+          console.error('Expected 3 search histories, but found', total_value.totalvalue);
         }
         //Code to validate the latest browsing history is shown correctly
-        const myvalue3 = myvalue2.values[0];
-        expect(myvalue3).toBe(inputSearchValue);
+        const value = total_value.values[0];
+        expect(value).toBe(inputSearchValue);
     } catch(error){
       console.error(error);
     }
